@@ -1,4 +1,3 @@
-# file_utils.py - утилиты для работы с файлами
 import os
 from datetime import datetime
 import config
@@ -11,7 +10,7 @@ def create_log_filename():
 def create_log_file():
     """Создает файл лога и возвращает путь к нему"""
     filename = create_log_filename()
-    filepath = os.path.join(config.DESKTOP_PATH, filename)
+    filepath = os.path.join(config.SAVE_PATH, filename)
     
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(config.LOG_HEADER)
