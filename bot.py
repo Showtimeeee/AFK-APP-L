@@ -3,7 +3,6 @@ import time
 import sys
 import threading
 from datetime import datetime
-
 import config
 import file_utils
 import notepad_controller
@@ -54,7 +53,6 @@ def wait_with_micro_movements(seconds):
     
     return True
 
-# ========== ОСНОВНАЯ ПРОГРАММА ==========
 
 if __name__ == "__main__":
     try:
@@ -113,3 +111,4 @@ if __name__ == "__main__":
         print(f"❌ Ошибка: {e}")
     finally:
         sys.exit(0)
+
