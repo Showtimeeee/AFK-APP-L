@@ -1,7 +1,7 @@
-# activity_generator.py - генерация текста для записи
 import random
 from datetime import datetime
 import config
+
 
 class ActivityGenerator:
     def __init__(self):
@@ -9,13 +9,11 @@ class ActivityGenerator:
         self.actions_done = 0
     
     def generate_line(self):
-        """Генерирует очередную строку для записи"""
         self.line_counter += 1
         self.actions_done += 1
         
         timestamp = datetime.now().strftime(config.TIME_FORMAT)
         phrase = random.choice(config.PHRASES)
-        
         text = f"{self.line_counter:3d}. [{timestamp}] {phrase}"
         
         return text, timestamp, phrase
@@ -23,4 +21,5 @@ class ActivityGenerator:
     def get_stats(self):
         """Возвращает статистику"""
         return self.line_counter, self.actions_done
+
         
