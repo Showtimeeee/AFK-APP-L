@@ -1,4 +1,3 @@
-# notepad_controller.py - управление блокнотом
 import pyautogui
 import time
 import random
@@ -41,4 +40,5 @@ def micro_movement():
 
 def close_notepad():
     """Закрывает блокнот"""
+
     pyautogui.hotkey('alt', 'f4')
